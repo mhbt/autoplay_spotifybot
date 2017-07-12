@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+  "name": "Spotify AutoPlay Utility",
+  "description": "I will autoplay your playlist/s about every 50 seconds.",
+  "version": "1.0",
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html",
+   "default_title": "Enable Spotify AutoPlay"
+  },
+ "content_scripts": [
+{ "run_at" :"document_start",
+"matches": ["https://open.spotify.com/*"],
+"js": ["jquery.min.js","autoplay.js"]
+}]
+}
